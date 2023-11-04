@@ -101,24 +101,24 @@ const skills = {
   show: false,
   heading: "Skills",
   hardSkills: [
-    { name: "Python", value: 90 },
-    { name: "SQL", value: 75 },
-    { name: "Data Structures", value: 85 },
-    { name: "C/C++", value: 65 },
-    { name: "JavaScript", value: 90 },
-    { name: "React", value: 65 },
-    { name: "HTML/CSS", value: 55 },
-    { name: "C#", value: 80 },
+    { name: "Python", value: 100 },
+    { name: "SQL", value: 100 },
+    { name: "Data Structures", value: 100 },
+    { name: "C/C++", value: 100 },
+    { name: "JavaScript", value: 100 },
+    { name: "React", value: 100 },
+    { name: "HTML/CSS", value: 100 },
+    { name: "C#", value: 100 },
   ],
   softSkills: [
-    { name: "Goal-Oriented", value: 80 },
-    { name: "Collaboration", value: 90 },
-    { name: "Positivity", value: 75 },
-    { name: "Adaptability", value: 85 },
-    { name: "Problem Solving", value: 75 },
-    { name: "Empathy", value: 90 },
-    { name: "Organization", value: 70 },
-    { name: "Creativity", value: 90 },
+    { name: "Goal-Oriented", value: 100 },
+    { name: "Collaboration", value: 100 },
+    { name: "Positivity", value: 100 },
+    { name: "Adaptability", value: 100 },
+    { name: "Problem Solving", value: 100 },
+    { name: "Empathy", value: 100 },
+    { name: "Organization", value: 100 },
+    { name: "Creativity", value: 100 },
   ],
 };
 
@@ -133,18 +133,28 @@ const getInTouch = {
 
 const experiences = {
   show: true,
-  heading: "Experiences",
+  heading: "Experience",
   data: [
     {
       role: 'Software / ML Engineer',
-      companylogo: require('../assets/img/dell.png'),
+      companylogo: require('../assets/img/urbanfox.png'),
       date: 'December 2022 – Present',
     },
     {
       role: 'Deep Learning Hardware Design Engineer',
-      companylogo: require('../assets/img/boeing.png'),
-      date: 'May 2017 – May 2018',
+      companylogo: require('../assets/img/intel_small.png'),
+      date: 'October 2021 – May 2022',
     },
+    {
+      role: 'Software Engineer Intern',
+      companylogo: require('../assets/img/airtel_small.png'),
+      date: 'March 2019 – August 2019',
+    },
+    {
+      role: 'M.Sc. CS & AI',
+      companylogo: require('../assets/img/uni_gal_small.png'),
+      date: 'September 2020 – September 2021',
+    }
   ]
 }
 
