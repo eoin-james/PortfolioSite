@@ -56,7 +56,7 @@ const about = {
   // imageSize: 375,
   message:
     "Dublin-based Software Engineer with a background in Computer Engineering and a Master's in Computer Science & AI. Currently, I'm crafting code at UrbanFox as a Software Engineer.",
-  resume: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
+  resume: "",
 };
 
 // PROJECTS SECTION
