@@ -1,33 +1,30 @@
 import React from "react";
-import { formatDate, extractContent } from "../utils"; // Import the functions
-
+import { extractContent } from "../utils";
 import Col from "react-bootstrap/Col";
 import Card from "react-bootstrap/Card";
 import Skeleton from "react-loading-skeleton";
-// import axios                    from "axios";
-// import { CardImg } from "react-bootstrap";
 import Image from "react-bootstrap/Image";
 
-
 function ArticleCard({ article }) {
-  console.log(article);
-  // const formattedDate = formatDate(article.pubDate);
-  const content = extractContent(article.description);
-  const thumbnailUrl = article.thumbnail.toString();
+  // Destructure the article object to access properties
+  console.log(article)
+  const { title, description, link, thumbnail } = article;
+
+  // Extract the content and ensure it's a string
+  const content = extractContent(description) || '';
 
   return (
     <Col md={4}>
       <Card className="card shadow-lg p-3 mb-5 bg-white rounded">
-        <Image src={thumbnailUrl} fluid/>
+        <Image src={thumbnail} fluid />
         <Card.Body>
-          {/*<Card.Img variant="top" image={article.thumbnail} />*/}
-          <Card.Title as="h5">{article.title || <Skeleton />} </Card.Title>
+          <Card.Title as="h5">{title || <Skeleton />} </Card.Title>
           <Card.Text>{content || <Skeleton count={3} />} </Card.Text>
           <hr />
           <Card.Text>
             <a
-              href={article.link}
-              target=" _blank"
+              href={link}
+              target="_blank" // Correct the space in target attribute
               className="text-dark text-decoration-none"
             >
               <span className="text-dark card-link mr-4">
@@ -38,7 +35,7 @@ function ArticleCard({ article }) {
         </Card.Body>
       </Card>
     </Col>
-       );
+  );
 }
 
 export default ArticleCard;

@@ -10,18 +10,34 @@ export function formatDate(inputText) {
 }
 
 export function extractContent(htmlString) {
-  const h4Pattern = /<h4>(.*?)<\/h4>/s;
-  const pPattern = /<p>(.*?)<\/p>/s;
-  const h4Match = htmlString.match(h4Pattern);
-  const pMatch = htmlString.match(pPattern);
+  // Create a new DOMParser
+  const parser = new DOMParser();
+  const doc = parser.parseFromString(htmlString, "text/html");
 
-  if (h4Match && pMatch) {
-    const h4Content = h4Match[1];
-    const pContent = pMatch[1];
+  // Try to select h4 and p elements
+  const h4Element = doc.querySelector("h4");
+  const pElement = doc.querySelector("p");
+
+  // Initialize content variables
+  let h4Content = "";
+  let pContent = "";
+
+  // Extract content if elements exist
+  if (h4Element) {
+    h4Content = h4Element.textContent.trim();
+  }
+
+  if (pElement) {
+    pContent = pElement.textContent.trim();
+  }
+
+  // Construct the final content
+  if (h4Content && pContent) {
     return `${h4Content} - ${pContent}`;
-  } else if (pMatch) {
-    const pContent = pMatch[1];
+  } else if (pContent) {
     return pContent;
   }
+
   return null;
 }
+
