@@ -52,7 +52,7 @@ const Navigation = React.forwardRef((props, ref) => {
           {repos.show && (
 
             <NavLink
-              href={process.env.PUBLIC_URL + "/#projects"}
+              href={process.env.PUBLIC_URL + "/#projs"}
             >
               Projects
             </NavLink>
