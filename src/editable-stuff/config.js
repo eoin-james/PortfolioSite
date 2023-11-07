@@ -5,8 +5,19 @@ const navBar = {
 
 // Main Body SECTION
 const mainBody = {
-  // gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
-  gradientColors: "#ffffff, #4484ce, #cccccc, #1ad7c0, #999999, #ff9b11, #666666, #9b59b6, #333333, #ff7f7f, #000000, #ecf0f1",
+  // gradientColors:
+  //     "#cccccc, #4484ce, #555555, #ff7f7f, #111111",
+
+  // gradientColors:
+  //     "#4484ce, #dddddd, " +
+  //     "#666666, #ff7f7f, " +
+  //     "#333333, #000000",
+
+  gradientColors:
+  "#4484ce, #4484ce, " +
+  "#666666, #ff7f7f, " +
+  "#333333, #000000",
+
   firstName: "Eoin",
   middleName: "",
   lastName: "Mc Allister",
@@ -32,6 +43,10 @@ const mainBody = {
     //   image: "fa-twitter",
     //   url: "https://www.twitter.com/hashirshoaeb/",
     // },
+    {
+      image: "fa-medium",
+      url: "https://medium.com/@Eoinmca_Projects",
+    }
   ],
 };
 
@@ -52,7 +67,7 @@ const mainBody = {
 const about = {
   show: true,
   heading: "About Me",
-  // imageLink: require("../editable-stuff/hashirshoaeb.png"),
+  // imageLink: require(""),
   // imageSize: 375,
   message:
     "Dublin-based Software Engineer with a background in Computer Engineering and a Master's in Computer Science & AI. Currently, I'm crafting code at UrbanFox as a Software Engineer.",
@@ -60,9 +75,9 @@ const about = {
 };
 
 // PROJECTS SECTION
-// Setting up project lenght will automatically fetch your that number of recently updated projects, or you can set this field 0 to show none.
+// Setting up projs lenght will automatically fetch your that number of recently updated projs, or you can set this field 0 to show none.
 //      i.e: reposLength: 0,
-// If you want to display specfic projects, add the repository names,
+// If you want to display specfic projs, add the repository names,
 //      i.e ["repository-1", "repo-2"]
 const repos = {
   show: true,
@@ -80,12 +95,12 @@ const leadership = {
     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae auctor eu augue ut lectus arcu bibendum at varius. Libero justo laoreet sit amet cursus sit amet. Imperdiet dui accumsan sit amet nulla facilisi morbi. At auctor urna nunc id. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Et magnis dis parturient montes nascetur ridiculus mus mauris. In nisl nisi scelerisque eu ultrices vitae auctor. Mattis nunc sed blandit libero volutpat sed cras ornare. Pulvinar neque laoreet suspendisse interdum consectetur libero.",
   images: [
     { 
-      img: require("../editable-stuff/hashirshoaeb.png"), 
+      // img: require("../editable-stuff/hashirshoaeb.png"),
       label: "First slide label", 
       paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
     },
     { 
-      img: require("../editable-stuff/hashirshoaeb.png"), 
+      // img: require("../editable-stuff/hashirshoaeb.png"),
       label: "Second slide label", 
       paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
     },
@@ -121,6 +136,13 @@ const skills = {
     { name: "Creativity", value: 100 },
   ],
 };
+
+const blog = {
+  show: true,
+  heading: "Medium Blogs",
+  medium_api: "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@Eoinmca_Projects"
+
+}
 
 // GET IN TOUCH SECTION
 const getInTouch = {
@@ -158,9 +180,4 @@ const experiences = {
   ]
 }
 
-// Blog SECTION
-// const blog = {
-//   show: false,
-// };
-
-export { navBar, mainBody, about, repos, skills, leadership, getInTouch, experiences };
+export { navBar, mainBody, about, repos, skills, leadership, getInTouch, experiences, blog };

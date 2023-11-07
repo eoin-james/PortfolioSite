@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useCallback } from "react";
-import Container from "react-bootstrap/Container";
-import { Jumbotron } from "./migration";
-import Row from "react-bootstrap/Row";
-import ProjectCard from "./ProjectCard";
-import axios from "axios";
+import Container     from "react-bootstrap/Container";
+import { Jumbotron } from "../migration";
+import Row           from "react-bootstrap/Row";
+import ProjectCard   from "./ProjectCard";
+import axios         from "axios";
 
 const dummyProject = {
   name: null,
@@ -14,8 +14,8 @@ const dummyProject = {
   pushed_at: null,
 };
 const API = "https://api.github.com";
-// const gitHubQuery = "/repos?sort=updated&direction=desc";
-// const specficQuerry = "https://api.github.com/repos/hashirshoaeb/";
+// const gitHubQuery = "/projs?sort=updated&direction=desc";
+// const specficQuerry = "https://api.github.com/repos/eoin-james/";
 
 const Project = ({ heading, username, length, specfic }) => {
   const allReposAPI = `${API}/users/${username}/repos?sort=updated&direction=desc`;
@@ -29,11 +29,11 @@ const Project = ({ heading, username, length, specfic }) => {
   const fetchRepos = useCallback(async () => {
     let repoList = [];
     try {
-      // getting all repos
+      // getting all projs
       const response = await axios.get(allReposAPI);
       // slicing to the length
       repoList = [...response.data.slice(0, length)];
-      // adding specified repos
+      // adding specified projs
       try {
         for (let repoName of specfic) {
           const response = await axios.get(`${specficReposAPI}/${repoName}`);

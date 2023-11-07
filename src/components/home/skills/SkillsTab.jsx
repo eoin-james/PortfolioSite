@@ -1,5 +1,5 @@
 import React from "react";
-import Col from "react-bootstrap/Col";
+import Col       from "react-bootstrap/Col";
 import SkillsBar from "./SkillsBar";
 
 function SkillsSection({ skills, isScrolled }) {
